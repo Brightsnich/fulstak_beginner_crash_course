@@ -1,0 +1,163 @@
+/* Custom styles for the Inter font and general body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            padding: 20px; /* Padding around the flyer */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+        /* Styling for the main flyer container */
+        .flyer-container {
+            background-color: #ffffff; /* White background for the flyer */
+            border-radius: 16px; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+            max-width: 600px; /* Max width for desktop view */
+            width: 100%; /* Full width on smaller screens */
+            overflow: hidden; /* Ensures rounded corners apply to children */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 30px; /* Padding at the bottom */
+        }
+        /* Header section with gradient background */
+        .flyer-header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); /* Green gradient for learning theme */
+            color: #ffffff;
+            padding: 40px 20px;
+            width: 100%;
+            border-bottom-left-radius: 16px; /* Rounded bottom-left corner */
+            border-bottom-right-radius: 16px; /* Rounded bottom-right corner */
+            margin-bottom: 20px;
+        }
+        .flyer-header h1 {
+            font-size: 2.8rem; /* Larger heading */
+            font-weight: 800; /* Extra bold */
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+        .flyer-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        /* Content section styling */
+        .flyer-content {
+            padding: 0 30px; /* Horizontal padding */
+            margin-top: 20px;
+        }
+        .flyer-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .flyer-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        /* Details section with icons */
+        .flyer-details {
+            display: flex;
+            flex-direction: column; /* Stack details vertically on small screens */
+            gap: 20px;
+            width: 100%;
+            padding: 0 30px;
+            margin-top: 20px;
+        }
+        .detail-item {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background-color: #f8f9fa; /* Light background for detail items */
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .detail-item .icon {
+            font-size: 1.8rem;
+            color: #2E7D32; /* Icon color matching gradient */
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e8f5e9; /* Light background for icon circle */
+        }
+        .detail-item .text {
+            font-size: 1rem;
+            color: #444;
+        }
+        .detail-item .text strong {
+            display: block; /* Make the label bold and on its own line */
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        /* Call to action button */
+        .cta-button {
+            background: linear-gradient(45deg, #FFD700 0%, #FFA500 100%); /* Gold/Orange gradient for FREE */
+            color: #333; /* Dark text for contrast */
+            padding: 15px 30px;
+            border-radius: 50px; /* Pill shape */
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 35px;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3); /* Shadow for pop effect */
+        }
+        .cta-button:hover {
+            transform: translateY(-3px); /* Lift effect on hover */
+            box-shadow: 0 12px 20px rgba(255, 215, 0, 0.4);
+        }
+        /* Footer section */
+        .flyer-footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+            padding: 0 30px;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (min-width: 480px) {
+            .flyer-details {
+                flex-direction: row; /* Arrange side-by-side on wider screens */
+                flex-wrap: wrap; /* Allow items to wrap */
+                justify-content: center;
+                gap: 20px;
+            }
+            .detail-item {
+                flex: 1 1 calc(50% - 20px); /* Two items per row */
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (min-width: 768px) {
+            .flyer-container {
+                padding-bottom: 40px;
+            }
+            .flyer-header {
+                padding: 50px 30px;
+            }
+            .flyer-header h1 {
+                font-size: 3.5rem;
+            }
+            .flyer-content {
+                padding: 0 40px;
+            }
+            .flyer-details {
+                padding: 0 40px;
+            }
+            .detail-item {
+                flex: 1 1 auto; /* Reset flex for larger screens if needed, or keep 50% */
+                max-width: none;
+            }
+        }
